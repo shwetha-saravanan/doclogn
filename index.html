@@ -19,26 +19,60 @@
             </div>
             <div class="input-group">
               <i class='bx bx-mail-send'></i>
-              <input id="DOC id" type="email" placeholder="DOC id ">
+              <input id="email" type="email" placeholder="Email">
             </div>
             <div class="input-group">
               <i class='bx bxs-lock-alt'></i>
               <input id="password" type="password" placeholder="Password">
-              </div>
-              <div class="input-group">
-              <i class='bx bxs-lock-alt'></i>
-              <input id="Hospital Name" type="number" placeholder="Hospital Name">
-            </div>
             </div>
              <div class="input-group">
               <i class='bx bxs-lock-alt'></i>
               <input id="age" type="number" placeholder="Age">
-          </div>
+            </div>
+              <div class="input-group">
+              <i class='bx bxs-lock-alt'></i>
+              <input id="Height" type="number" placeholder="Height">
+            </div>
             <div class="input-group">
               <i class='bx bxs-lock-alt'></i>
-              <input id="Desiginaton" type="number" placeholder="Desiginaton">
-         
-       </div>
+              <input id="bmi" type="number" placeholder="BMI">
+            </div>
+                <div class="input-group">
+              <i class='bx bxs-lock-alt'></i>
+              <label for="obese">Are you obese?</label>
+              <select id="obese">
+                <option value="" disabled selected>Select an option</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <i class='bx bxs-lock-alt'></i>
+              <label for="ethnicity">Ethnicity:</label>
+              <select id="ethnicity">
+                <option value="" disabled selected>Select ethnicity</option>
+                <option value="IND">IND</option>
+                <option value="GBR">GBR</option>
+                <option value="OTH">OTH</option>
+              </select>
+            </div>
+    
+            <div class="input-group">
+              <i class='bx bxs-lock-alt'></i>
+              <label for="previous-gdm">Previous history of GDM?</label>
+              <select id="previous-gdm">
+                <option value="" disabled selected>Select an option</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <button id="signup-btn">Sign up</button>
+            <p>
+              <span>Already have an account?</span>
+              <b onclick="toggle()" class="pointer">Sign in here</b>
+            </p>
+          </div>
+        </div>
       </div>
       <!-- END SIGN UP -->
       <!-- SIGN IN -->
@@ -47,7 +81,7 @@
           <div class="form sign-in">
             <div class="input-group">
               <i class='bx bxs-user'></i>
-              <input id="DOC id" type="email" placeholder="DOC id ">
+              <input id="signin-username" type="text" placeholder="Username">
             </div>
             <div class="input-group">
               <i class='bx bxs-lock-alt'></i>
@@ -88,7 +122,6 @@
       <!-- END SIGN UP CONTENT -->
     </div>
     <!-- END CONTENT SECTION -->
-  </div>
   </div>
 
   <script src="script.js"></script>
