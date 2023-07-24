@@ -159,3 +159,33 @@ label span.text-checkbox {
 label input[type="checkbox"] {
   display: none;
 }
+/* ... (Your existing CSS code) ... */
+
+#container .row {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+#container .sign-in {
+  transform: translateX(0);
+}
+
+#container .sign-up {
+  transform: translateX(100%);
+}
+
+#container.slide-signup .sign-in {
+  transform: translateX(-100%);
+}
+
+#container.slide-signup .sign-up {
+  transform: translateX(0);
+}
+
+#container.slide-signin .sign-in {
+  transform: translateX(0);
+}
+
+#container.slide-signin .sign-up {
+  transform: translateX(-100%);
+}
