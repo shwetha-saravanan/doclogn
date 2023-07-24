@@ -27,9 +27,6 @@ body {
     align-items: center;
   }
 }
-.box-form div {
-  height: auto;
-}
 .box-form .left {
   color: #FFFFFF;
   background-size: cover;
