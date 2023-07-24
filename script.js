@@ -11,12 +11,6 @@ function toggleSignUp() {
   container.classList.add('sign-up');
 };
 
-function toggleSignIn() {
-  let container = document.getElementById('container');
-  container.classList.remove('sign-up');
-  container.classList.add('sign-in');
-};
-
 document.getElementById('signup-btn').addEventListener('click', (event) => {
   event.preventDefault();
   // Retrieve form values
