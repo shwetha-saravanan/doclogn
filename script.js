@@ -5,6 +5,12 @@ toggle = () => {
   container.classList.toggle('sign-up');
 };
 
+function toggleSignUp() {
+  let container = document.getElementById('container');
+  container.classList.toggle('sign-up');
+  container.classList.toggle('sign-in');
+};
+
 document.getElementById('signup-btn').addEventListener('click', (event) => {
   event.preventDefault();
   // Retrieve form values
@@ -56,5 +62,3 @@ document.getElementById('signin-btn').addEventListener('click', (event) => {
   // Transition to the sign-up section or perform any desired action
   toggle();
 });
-
-// The setTimeout is no longer needed since we are initially showing the 'sign-up' section.
