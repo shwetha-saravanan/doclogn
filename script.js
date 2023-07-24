@@ -7,8 +7,14 @@ toggle = () => {
 
 function toggleSignUp() {
   let container = document.getElementById('container');
-  container.classList.toggle('sign-up');
-  container.classList.toggle('sign-in');
+  container.classList.remove('sign-in');
+  container.classList.add('sign-up');
+};
+
+function toggleSignIn() {
+  let container = document.getElementById('container');
+  container.classList.remove('sign-up');
+  container.classList.add('sign-in');
 };
 
 document.getElementById('signup-btn').addEventListener('click', (event) => {
@@ -32,7 +38,7 @@ document.getElementById('signup-btn').addEventListener('click', (event) => {
   console.log('Hospital Name:', hospitalName);
 
   // Transition to the sign-in section or perform any desired action
-  toggle();
+  toggleSignIn();
 
   // You can add any other action you want after the sign-up button is clicked.
   // For example, showing a success message or redirecting to another page.
@@ -60,5 +66,5 @@ document.getElementById('signin-btn').addEventListener('click', (event) => {
   }
 
   // Transition to the sign-up section or perform any desired action
-  toggle();
+  toggleSignUp();
 });
