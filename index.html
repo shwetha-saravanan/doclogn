@@ -25,25 +25,26 @@
 
   <div class="right">
     <h5>Login</h5>
-    <p>Don't have an account? <a href="#">Create Your Account</a> it takes less than a minute</p>
+    <p>Don't have an account? <a href="javascript:void(0);" onclick="toggleSignUp()">Create Your Account</a> it takes less than a minute</p>
     <div class="inputs">
       <input type="text" placeholder="Username">
       <br>
       <input type="password" placeholder="Password">
     </div>
-    <div id="container" class="container sign-up"> <!-- Initially show the 'sign-up' section -->
 
-    <div class="doctor-signup">
-      <h5>Doctor Sign-up Details</h5>
-      <div class="inputs">
-        <input type="text" placeholder="Doc ID">
-        <br>
-        <input type="text" placeholder="Hospital Name">
-        <br>
-        <!-- Add more doctor-specific input fields here, if needed -->
+    <div id="container" class="container sign-up"> <!-- Initially show the 'sign-up' section -->
+      <div class="doctor-signup">
+        <h5>Doctor Sign-up Details</h5>
+        <div class="inputs">
+          <input type="text" placeholder="Doc ID">
+          <br>
+          <input type="text" placeholder="Hospital Name">
+          <br>
+          <!-- Add more doctor-specific input fields here, if needed -->
+        </div>
       </div>
     </div>
-     </div>
+
     <br><br>
 
     <div class="remember-me--forget-password">
@@ -63,6 +64,12 @@
 <!-- partial -->
 
 <script>
+function toggleSignUp() {
+  let container = document.getElementById('container');
+  container.classList.toggle('sign-up');
+  container.classList.toggle('sign-in');
+}
+
 function login() {
   // Here, you can add the logic for form validation
   // and other processing as needed before redirecting.
