@@ -2,70 +2,128 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DOCTOR Login- GDM Analyzer</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" href="./style.css">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="style1.css">
 </head>
 <body>
-
-<div class="box-form">
-  <div class="left">
-    <div class="overlay">
-      <h1>GDM Risk Assessment</h1>
-      <p></p>
-      <span>
-        <p>login with social media</p>
-        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Login with Twitter</a>
-      </span>
-    </div>
-  </div>
-
-  <div class="right">
-    <h5>Login</h5>
-    <p>Don't have an account? <a href="#" onclick="toggleSignUp()">Create Your Account</a> it takes less than a minute</p>
-    <div class="inputs">
-      <input type="text" placeholder="Username">
-      <br>
-      <input type="password" placeholder="Password">
-    </div>
-    <div id="container" class="container sign-up"> <!-- Initially show the 'sign-up' section -->
-      <div class="doctor-signup">
-        <h5>Doctor Sign-up Details</h5>
-        <div class="inputs">
-          <input type="text" placeholder="Doc ID">
-          <br>
-           <input type="text" placeholder="Doc Name">
-          <br>
-          <input type="text" placeholder="Hospital Name">
-          <br>
-          <input type="text" placeholder="Designation">
-          <br>
-          <input type="text" placeholder="Username">
-          <br>
-          <input type="password" placeholder="Password">
-          <!-- Add more doctor-specific input fields here, if needed -->
+  <div id="container" class="container">
+    <!-- FORM SECTION -->
+    <div class="row">
+      <!-- SIGN UP -->
+      <div class="col align-items-center flex-col sign-up">
+        <div class="form-wrapper align-items-center">
+          <div class="form sign-up">
+            <div class="input-group">
+              <i class='bx bxs-user'></i>
+              <input id="username" type="text" placeholder="Username">
+            </div>
+            <div class="input-group">
+              <i class='bx bx-mail-send'></i>
+              <input id="email" type="email" placeholder="Email">
+            </div>
+            <div class="input-group">
+              <i class='bx bxs-lock-alt'></i>
+              <input id="password" type="password" placeholder="Password">
+            </div>
+             <div class="input-group">
+              <i class='bx bxs-lock-alt'></i>
+              <input id="age" type="number" placeholder="Age">
+            </div>
+              <div class="input-group">
+              <i class='bx bxs-lock-alt'></i>
+              <input id="Height" type="number" placeholder="Height">
+            </div>
+            <div class="input-group">
+              <i class='bx bxs-lock-alt'></i>
+              <input id="bmi" type="number" placeholder="BMI">
+            </div>
+                <div class="input-group">
+              <i class='bx bxs-lock-alt'></i>
+              <label for="obese">Are you obese?</label>
+              <select id="obese">
+                <option value="" disabled selected>Select an option</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <i class='bx bxs-lock-alt'></i>
+              <label for="ethnicity">Ethnicity:</label>
+              <select id="ethnicity">
+                <option value="" disabled selected>Select ethnicity</option>
+                <option value="IND">IND</option>
+                <option value="GBR">GBR</option>
+                <option value="OTH">OTH</option>
+              </select>
+            </div>
+    
+            <div class="input-group">
+              <i class='bx bxs-lock-alt'></i>
+              <label for="previous-gdm">Previous history of GDM?</label>
+              <select id="previous-gdm">
+                <option value="" disabled selected>Select an option</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <button id="signup-btn">Sign up</button>
+            <p>
+              <span>Already have an account?</span>
+              <b onclick="toggle()" class="pointer">Sign in here</b>
+            </p>
+          </div>
         </div>
       </div>
+      <!-- END SIGN UP -->
+      <!-- SIGN IN -->
+      <div class="col align-items-center flex-col sign-in">
+        <div class="form-wrapper align-items-center">
+          <div class="form sign-in">
+            <div class="input-group">
+              <i class='bx bxs-user'></i>
+              <input id="signin-username" type="text" placeholder="Username">
+            </div>
+            <div class="input-group">
+              <i class='bx bxs-lock-alt'></i>
+              <input id="signin-password" type="password" placeholder="Password">
+            </div>
+            <button id="signin-btn">Sign in</button>
+            <p>
+              <b>Forgot password?</b>
+            </p>
+            <p>
+              <span>Don't have an account?</span>
+              <b onclick="toggle()" class="pointer">Sign up here</b>
+            </p>
+          </div>
+        </div>
+        <div class="form-wrapper"></div>
+      </div>
+      <!-- END SIGN IN -->
     </div>
-    <br><br>
-
-    <div class="remember-me--forget-password">
-      <!-- Angular -->
-      <label>
-        <input type="checkbox" name="item" checked/>
-        <span class="text-checkbox">Remember me</span>
-      </label>
-      <p>forgot password?</p>
+    <!-- END FORM SECTION -->
+    <!-- CONTENT SECTION -->
+    <div class="row content-row">
+      <!-- SIGN IN CONTENT -->
+      <div class="col align-items-center flex-col">
+        <div class="text sign-in">
+          <h2>Welcome</h2>
+        </div>
+        <div class="img sign-in"></div>
+      </div>
+      <!-- END SIGN IN CONTENT -->
+      <!-- SIGN UP CONTENT -->
+      <div class="col align-items-center flex-col">
+        <div class="img sign-up"></div>
+        <div class="text sign-up">
+          <h2>Join with us</h2>
+        </div>
+      </div>
+      <!-- END SIGN UP CONTENT -->
     </div>
-
-    <br>
-    <button onclick="login()">Login</button>
+    <!-- END CONTENT SECTION -->
   </div>
-</div>
 
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
