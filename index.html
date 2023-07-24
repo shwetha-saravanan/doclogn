@@ -23,32 +23,29 @@
     </div>
   </div>
 
-  <div class="right">
-    <h5>Login</h5>
-    <p>Don't have an account? <a href="javascript:void(0);" onclick="toggleSignUp()">Create Your Account</a> it takes less than a minute</p>
+  <div id="container" class="right sign-up"> <!-- Initially show the 'sign-up' section -->
+
+    <h5>Doctor Sign-up</h5>
     <div class="inputs">
-      <input type="text" placeholder="Username">
+      <input type="text" placeholder="Username" id="username">
       <br>
-      <input type="password" placeholder="Password">
-    </div>
-
-    <div id="container" class="container sign-up"> <!-- Initially show the 'sign-up' section -->
-      <div class="doctor-signup">
-        <h5>Doctor Sign-up Details</h5>
-        <div class="inputs">
-          <input type="text" placeholder="Doc ID">
-          <br>
-          <input type="text" placeholder="Hospital Name">
-          <br>
-          <!-- Add more doctor-specific input fields here, if needed -->
-        </div>
+      <input type="email" placeholder="Email" id="email">
+      <br>
+      <input type="password" placeholder="Password" id="password">
       </div>
+    <p>Already have an account? <a href="#" onclick="toggleSignUp()">Sign In</a> </p>
+    <div class="inputs">
+      <input type="text" placeholder="Username" id="username">
+      <br>
+      <input type="email" placeholder="Email" id="email">
+      <br>
+      <input type="password" placeholder="Password" id="password">
+      <br>
+      <input type="text" placeholder="Doc ID" id="doc-id">
+      <br>
+      <input type="text" placeholder="Hospital Name" id="hospital-name">
     </div>
-
-    <br><br>
-
     <div class="remember-me--forget-password">
-      <!-- Angular -->
       <label>
         <input type="checkbox" name="item" checked/>
         <span class="text-checkbox">Remember me</span>
@@ -57,27 +54,13 @@
     </div>
 
     <br>
-    <button onclick="login()">Login</button>
+    <button id="signup-btn">Sign up</button>
   </div>
 
 </div>
 <!-- partial -->
 
-<script>
-function toggleSignUp() {
-  let container = document.getElementById('container');
-  container.classList.toggle('sign-up');
-  container.classList.toggle('sign-in');
-}
-
-function login() {
-  // Here, you can add the logic for form validation
-  // and other processing as needed before redirecting.
-
-  // Redirect to another page after login (example: dashboard.html)
-  window.location.href = "dashboard.html";
-}
-</script>
+<script src="./script.js"></script>
 
 </body>
 </html>
